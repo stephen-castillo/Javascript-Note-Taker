@@ -1,5 +1,6 @@
 // Import Express.js
 const express = require('express');
+const {v4:uuidv4} = require('uuid');
 
 // Import built-in Node.js package 'path' to resolve path of files that are located on the server
 const path = require('path');
