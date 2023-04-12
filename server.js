@@ -1,6 +1,11 @@
 // Import Express.js
 const express = require('express');
+
+//Import UUID package for creating universally unique identifiers 
 const {v4:uuidv4} = require('uuid');
+
+//Import fs module to read and write from system files
+const fs = require('fs');
 
 // Import built-in Node.js package 'path' to resolve path of files that are located on the server
 const path = require('path');
@@ -25,6 +30,9 @@ app.get('/notes', (req, res) =>
 app.get('/api/notes', (req, res) =>
   res.sendFile(path.join(__dirname, 'db/db.json'))
 );
+
+//test uuid
+//console.log(uuidv4());
 
 // listen() method is responsible for listening for incoming connections on the specified port 
 app.listen(PORT, () =>
