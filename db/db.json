@@ -1,6 +1,12 @@
 [
-    {
+    {   
+        "id":"1",
         "title":"Test Title",
         "text":"Test text"
+    },
+    {
+        "id":"2",
+        "title":"Johnny!",
+        "text":"Johnny used to works at the docks!"
     }
 ]
