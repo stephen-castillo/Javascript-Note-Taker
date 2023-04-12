@@ -1,12 +1,22 @@
 [
-    {   
-        "id":"1",
-        "title":"Test Title",
-        "text":"Test text"
-    },
-    {
-        "id":"2",
-        "title":"Johnny!",
-        "text":"Johnny used to works at the docks!"
-    }
+  {
+    "title": "Test Title",
+    "text": "Test text",
+    "id": "1"
+  },
+  {
+    "title": "Johnny!",
+    "text": "Johnny used to works at the docks!",
+    "id": "2"
+  },
+  {
+    "title": "Rick",
+    "text": "I'm pickle Rick!!",
+    "id": "1e4e3654-0081-45c0-af8b-e8c045e80339"
+  },
+  {
+    "title": "The End",
+    "text": "Bring on the world eater",
+    "id": "64aa5d4d-081d-494e-9929-672042b5bf50"
+  }
 ]

@@ -27,12 +27,25 @@ app.get('/notes', (req, res) =>
 );
 
 //Retrieve the notes from the db.json file
-app.get('/api/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, 'db/db.json'))
-);
+app.get('/api/notes', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'db/db.json'));
+});
 
 //test uuid
 //console.log(uuidv4());
+
+//Save new note
+app.post('/api/notes', (req, res) => {
+    const data = JSON.parse(fs.readFileSync("db/db.json","utf8"));
+    const newNote = {
+        title: req.body.title,
+        text: req.body.text,
+        id: uuidv4(),
+    };
+    data.push(newNote);
+    fs.writeFileSync("db/db.json",JSON.stringify(data, null, 2));
+    res.json(data);
+});
 
 // listen() method is responsible for listening for incoming connections on the specified port 
 app.listen(PORT, () =>
