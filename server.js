@@ -47,6 +47,17 @@ app.post('/api/notes', (req, res) => {
     res.json(data);
 });
 
+//Delete Note
+app.delete('/api/notes/:id', (req, res) =>{
+    let data = JSON.parse(fs.readFileSync("db/db.json","utf8"));
+    data = data.filter((note)=> { 
+        return note.id !== req.params.id;
+    });
+    fs.writeFileSync("db/db.json",JSON.stringify(data));
+    res.json("Note deleted.");
+
+});
+
 // listen() method is responsible for listening for incoming connections on the specified port 
 app.listen(PORT, () =>
   console.log(`Example app listening at http://localhost:${PORT}`)
